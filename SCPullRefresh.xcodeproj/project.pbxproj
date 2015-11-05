@@ -28,6 +28,12 @@
 		294B3757199BD72A00718F3F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 294B3756199BD72A00718F3F /* Images.xcassets */; };
 		294B375A199BD9F800718F3F /* SCCircularRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 294B3759199BD9F800718F3F /* SCCircularRefreshView.m */; };
 		294B375E199BDA7E00718F3F /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 294B375D199BDA7E00718F3F /* DACircularProgressView.m */; };
+		B0AE222D1BEB38DF00A9779D /* KSActivityIndicatorBallPulseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B0AE22281BEB38DF00A9779D /* KSActivityIndicatorBallPulseAnimation.m */; };
+		B0AE222E1BEB38DF00A9779D /* KSActivityIndicatorBallPulseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B0AE22281BEB38DF00A9779D /* KSActivityIndicatorBallPulseAnimation.m */; };
+		B0AE222F1BEB38DF00A9779D /* KSActivityIndicatorCookieTerminatorAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B0AE222A1BEB38DF00A9779D /* KSActivityIndicatorCookieTerminatorAnimation.m */; };
+		B0AE22301BEB38DF00A9779D /* KSActivityIndicatorCookieTerminatorAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B0AE222A1BEB38DF00A9779D /* KSActivityIndicatorCookieTerminatorAnimation.m */; };
+		B0AE22311BEB38DF00A9779D /* KSActivityIndicatorTriplePulseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B0AE222C1BEB38DF00A9779D /* KSActivityIndicatorTriplePulseAnimation.m */; };
+		B0AE22321BEB38DF00A9779D /* KSActivityIndicatorTriplePulseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B0AE222C1BEB38DF00A9779D /* KSActivityIndicatorTriplePulseAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +81,12 @@
 		294B3759199BD9F800718F3F /* SCCircularRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCircularRefreshView.m; sourceTree = "<group>"; };
 		294B375C199BDA7E00718F3F /* DACircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DACircularProgressView.h; sourceTree = "<group>"; };
 		294B375D199BDA7E00718F3F /* DACircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DACircularProgressView.m; sourceTree = "<group>"; };
+		B0AE22271BEB38DF00A9779D /* KSActivityIndicatorBallPulseAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSActivityIndicatorBallPulseAnimation.h; sourceTree = "<group>"; };
+		B0AE22281BEB38DF00A9779D /* KSActivityIndicatorBallPulseAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSActivityIndicatorBallPulseAnimation.m; sourceTree = "<group>"; };
+		B0AE22291BEB38DF00A9779D /* KSActivityIndicatorCookieTerminatorAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSActivityIndicatorCookieTerminatorAnimation.h; sourceTree = "<group>"; };
+		B0AE222A1BEB38DF00A9779D /* KSActivityIndicatorCookieTerminatorAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSActivityIndicatorCookieTerminatorAnimation.m; sourceTree = "<group>"; };
+		B0AE222B1BEB38DF00A9779D /* KSActivityIndicatorTriplePulseAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSActivityIndicatorTriplePulseAnimation.h; sourceTree = "<group>"; };
+		B0AE222C1BEB38DF00A9779D /* KSActivityIndicatorTriplePulseAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSActivityIndicatorTriplePulseAnimation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +191,7 @@
 		294B373F199BC01F00718F3F /* SCPullRefresh */ = {
 			isa = PBXGroup;
 			children = (
+				B0AE22261BEB38DF00A9779D /* KSActivity */,
 				294B3740199BC07D00718F3F /* CAAnimationBlocks */,
 				294B3743199BC07D00718F3F /* SCBubbleRefreshView.h */,
 				294B3744199BC07D00718F3F /* SCBubbleRefreshView.m */,
@@ -227,6 +240,19 @@
 				294B375D199BDA7E00718F3F /* DACircularProgressView.m */,
 			);
 			path = DACircularProgress;
+			sourceTree = "<group>";
+		};
+		B0AE22261BEB38DF00A9779D /* KSActivity */ = {
+			isa = PBXGroup;
+			children = (
+				B0AE22271BEB38DF00A9779D /* KSActivityIndicatorBallPulseAnimation.h */,
+				B0AE22281BEB38DF00A9779D /* KSActivityIndicatorBallPulseAnimation.m */,
+				B0AE22291BEB38DF00A9779D /* KSActivityIndicatorCookieTerminatorAnimation.h */,
+				B0AE222A1BEB38DF00A9779D /* KSActivityIndicatorCookieTerminatorAnimation.m */,
+				B0AE222B1BEB38DF00A9779D /* KSActivityIndicatorTriplePulseAnimation.h */,
+				B0AE222C1BEB38DF00A9779D /* KSActivityIndicatorTriplePulseAnimation.m */,
+			);
+			path = KSActivity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,9 +352,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0AE222F1BEB38DF00A9779D /* KSActivityIndicatorCookieTerminatorAnimation.m in Sources */,
 				294B3751199BC11400718F3F /* ScrollViewFrameAccessor.m in Sources */,
 				294B3749199BC07D00718F3F /* SCPullRefreshViewController.m in Sources */,
 				294B3755199BD5D800718F3F /* SCRootViewController.m in Sources */,
+				B0AE222D1BEB38DF00A9779D /* KSActivityIndicatorBallPulseAnimation.m in Sources */,
+				B0AE22311BEB38DF00A9779D /* KSActivityIndicatorTriplePulseAnimation.m in Sources */,
 				294B3752199BC11400718F3F /* ViewFrameAccessor.m in Sources */,
 				294B3721199BA44B00718F3F /* SCAppDelegate.m in Sources */,
 				294B375E199BDA7E00718F3F /* DACircularProgressView.m in Sources */,
@@ -343,6 +372,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0AE22301BEB38DF00A9779D /* KSActivityIndicatorCookieTerminatorAnimation.m in Sources */,
+				B0AE22321BEB38DF00A9779D /* KSActivityIndicatorTriplePulseAnimation.m in Sources */,
+				B0AE222E1BEB38DF00A9779D /* KSActivityIndicatorBallPulseAnimation.m in Sources */,
 				294B3736199BA44B00718F3F /* SCPullRefreshTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
