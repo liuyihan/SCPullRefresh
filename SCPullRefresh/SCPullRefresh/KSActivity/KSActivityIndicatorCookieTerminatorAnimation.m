@@ -188,7 +188,7 @@ static CGFloat  jawAnimationTime = 0.3f;
 
 - (void)beginRefreshing{
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.35 * NSEC_PER_SEC)), dispatch_get_main_queue(),^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.40 * NSEC_PER_SEC)), dispatch_get_main_queue(),^{
         
         self.indexNow = 2;
         self.timer = [NSTimer scheduledTimerWithTimeInterval:0.6 target:self selector:@selector(animateLoop) userInfo:nil repeats:YES];
@@ -214,14 +214,17 @@ static CGFloat  jawAnimationTime = 0.3f;
     
     for (CAShapeLayer *jawLayer in self.jawLayerArray) {
         jawLayer.speed = 0;
-        jawLayer.timeOffset = 0;
         jawLayer.fillColor = RGBA(0x39c6d7, 1.0).CGColor;
     }
     
     for (CALayer *cookieLayer in self.cookieLayerArray) {
         cookieLayer.speed = 0;
-        cookieLayer.timeOffset = 0;
     }
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.40 * NSEC_PER_SEC)), dispatch_get_main_queue(),^{
+        
+        self.timeOffset = 0.0f;
+    });
 }
 
 @end
