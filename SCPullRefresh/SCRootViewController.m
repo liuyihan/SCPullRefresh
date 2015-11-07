@@ -46,7 +46,7 @@
         
         __strong typeof(SCRootViewController) *strongSelf = weakSelf;
         
-        [strongSelf performSelector:@selector(endRefresh) withObject:strongSelf afterDelay:5.0];
+        [strongSelf performSelector:@selector(endRefresh) withObject:strongSelf afterDelay:10.0];
         
     };
     
@@ -54,7 +54,7 @@
         
         __strong typeof(SCRootViewController) *strongSelf = weakSelf;
         
-        [strongSelf performSelector:@selector(endLoadMore) withObject:strongSelf afterDelay:5.0];
+        [strongSelf performSelector:@selector(endLoadMore) withObject:strongSelf afterDelay:10.0];
 
     };
     
