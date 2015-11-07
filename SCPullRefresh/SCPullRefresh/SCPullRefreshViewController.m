@@ -30,8 +30,8 @@ static CGFloat const kRefreshHeight = 44.0f;
 @property (nonatomic, strong) SCBubbleRefreshView *refreshView;
 @property (nonatomic, strong) SCBubbleRefreshView *loadMoreView;
 #else
-@property (nonatomic, strong) KSActivityIndicatorBallPulseAnimation *refreshView;
-@property (nonatomic, strong) KSActivityIndicatorBallPulseAnimation *loadMoreView;
+@property (nonatomic, strong) KSActivityIndicatorCookieTerminatorAnimation *refreshView;
+@property (nonatomic, strong) KSActivityIndicatorCookieTerminatorAnimation *loadMoreView;
 #endif
 
 @property (nonatomic, assign) BOOL isLoadingMore;
@@ -81,12 +81,12 @@ static CGFloat const kRefreshHeight = 44.0f;
     
     // circular aniamtion
     self.tableHeaderView = [[UIView alloc] initWithFrame:(CGRect){0, 0, kScreenWidth, 0}];
-    self.refreshView = [[KSActivityIndicatorBallPulseAnimation alloc] initWithFrame:(CGRect){0, -44, kScreenWidth, 44}];
+    self.refreshView = [[KSActivityIndicatorCookieTerminatorAnimation alloc] initWithFrame:(CGRect){0, -44, kScreenWidth, 44}];
     self.refreshView.timeOffset = 0.0;
     [self.tableHeaderView addSubview:self.refreshView];
     
     self.tableFooterView = [[UIView alloc] initWithFrame:(CGRect){0, 0, kScreenWidth, 0}];
-    self.loadMoreView = [[KSActivityIndicatorBallPulseAnimation alloc] initWithFrame:(CGRect){0, 0, kScreenWidth, 44}];
+    self.loadMoreView = [[KSActivityIndicatorCookieTerminatorAnimation alloc] initWithFrame:(CGRect){0, 0, kScreenWidth, 44}];
     self.loadMoreView.timeOffset = 0.0;
     [self.tableFooterView addSubview:self.loadMoreView];
     
