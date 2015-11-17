@@ -82,6 +82,7 @@ static CGFloat  jawAnimationTime = 0.3f;
             jawLayer.speed = 0;
             
             CABasicAnimation *transformAnimation = [self jawAnimation:i];
+            transformAnimation.timeOffset = 0;
             
             [self.layer addSublayer:jawLayer];
             [self.jawLayerArray addObject:jawLayer];
@@ -106,6 +107,7 @@ static CGFloat  jawAnimationTime = 0.3f;
             cookieLayer.speed = 0;
             
             CABasicAnimation *transformAnimation = [self cookieAnimation:i];
+            transformAnimation.timeOffset = 0;
             
             [self.layer insertSublayer:cookieLayer below:firstJawLayer];
             [self.cookieLayerArray addObject:cookieLayer];
@@ -140,7 +142,7 @@ static CGFloat  jawAnimationTime = 0.3f;
     transformAnimation.fromValue = [NSValue valueWithCATransform3D:CATransform3DMakeTranslation(0.0f, 0.0f, 0.0f)];
     transformAnimation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeTranslation(-3.0f * (self.cookieSize + self.cookiePadding), 0.0f, 0.0f)];
     transformAnimation.repeatCount = HUGE_VALF;
-    transformAnimation.removedOnCompletion = YES;
+    transformAnimation.removedOnCompletion = NO;
     transformAnimation.timingFunction = [CAMediaTimingFunction functionWithName: kCAMediaTimingFunctionLinear];
     
     return transformAnimation;
@@ -157,6 +159,7 @@ static CGFloat  jawAnimationTime = 0.3f;
     for (CALayer *cookieLayer in self.cookieLayerArray) {
         cookieLayer.timeOffset = timeOffset;
     }
+    
     
     if (timeOffset > 0.001){
         
@@ -188,12 +191,12 @@ static CGFloat  jawAnimationTime = 0.3f;
 
 - (void)beginRefreshing{
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.40 * NSEC_PER_SEC)), dispatch_get_main_queue(),^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(),^{
         
         self.indexNow = 2;
         self.timer = [NSTimer scheduledTimerWithTimeInterval:0.6 target:self selector:@selector(animateLoop) userInfo:nil repeats:YES];
     });
-
+    
     for (CAShapeLayer *jawLayer in self.jawLayerArray) {
         jawLayer.speed = 1.0;
         jawLayer.timeOffset = 0;
@@ -209,22 +212,35 @@ static CGFloat  jawAnimationTime = 0.3f;
 
 - (void)endRefreshing{
     
-    [self.timer invalidate];
-    self.indexNow = 2;
-    
-    for (CAShapeLayer *jawLayer in self.jawLayerArray) {
-        jawLayer.speed = 0;
-        jawLayer.fillColor = RGBA(0x39c6d7, 1.0).CGColor;
-    }
-    
-    for (CALayer *cookieLayer in self.cookieLayerArray) {
-        cookieLayer.speed = 0;
-    }
-    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.40 * NSEC_PER_SEC)), dispatch_get_main_queue(),^{
+        
+        [self.timer invalidate];
+        self.indexNow = 2;
+        
+        for (int i = 0; i < self.jawLayerArray.count ; i++) {
+            CAShapeLayer *jawLayer = [self.jawLayerArray objectAtIndex:i];
+            jawLayer.speed = 0;
+            jawLayer.fillColor = RGBA(0x39c6d7, 1.0).CGColor;
+            
+            [jawLayer removeAllAnimations];
+            
+            CABasicAnimation *transformAnimation = [self jawAnimation:i];
+            transformAnimation.timeOffset = 0;
+            [jawLayer addAnimation:transformAnimation forKey:animationKey];
+        }
+        
+        for ( int i = 0; i < self.cookieLayerArray.count; i++) {
+            CALayer *cookieLayer = [self.cookieLayerArray objectAtIndex:i];
+            cookieLayer.speed = 0;
+            
+            [cookieLayer removeAllAnimations];
+            
+            CABasicAnimation *transformAnimation = [self cookieAnimation:i];
+            transformAnimation.timeOffset = 0;
+            [cookieLayer addAnimation:transformAnimation forKey:animationKey];
+        }
         
         self.timeOffset = 0.0f;
     });
 }
-
 @end

@@ -94,6 +94,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    UIViewController *vc = [[UIViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end
