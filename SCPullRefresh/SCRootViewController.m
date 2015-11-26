@@ -8,6 +8,8 @@
 
 #import "SCRootViewController.h"
 
+#import "SCPullRefresh-swift.h"
+
 @interface SCRootViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @end
@@ -95,7 +97,7 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    UIViewController *vc = [[UIViewController alloc] init];
+    SCTestSwiftViewController *vc = [[SCTestSwiftViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

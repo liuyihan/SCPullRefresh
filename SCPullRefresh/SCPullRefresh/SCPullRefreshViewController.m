@@ -15,7 +15,7 @@
 #import "KSActivityIndicatorTriplePulseAnimation.h"
 #import "KSActivityIndicatorCookieTerminatorAnimation.h"
 
-//#define kBubbleAnimation
+#define kBubbleAnimation
 #define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
 
 

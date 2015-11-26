@@ -28,6 +28,8 @@
 		294B3757199BD72A00718F3F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 294B3756199BD72A00718F3F /* Images.xcassets */; };
 		294B375A199BD9F800718F3F /* SCCircularRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 294B3759199BD9F800718F3F /* SCCircularRefreshView.m */; };
 		294B375E199BDA7E00718F3F /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 294B375D199BDA7E00718F3F /* DACircularProgressView.m */; };
+		B04EC8C21C02D1AB007341FA /* SCTestSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04EC8C11C02D1AB007341FA /* SCTestSwiftViewController.swift */; };
+		B04EC8C31C02D1AB007341FA /* SCTestSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04EC8C11C02D1AB007341FA /* SCTestSwiftViewController.swift */; };
 		B0AE222D1BEB38DF00A9779D /* KSActivityIndicatorBallPulseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B0AE22281BEB38DF00A9779D /* KSActivityIndicatorBallPulseAnimation.m */; };
 		B0AE222E1BEB38DF00A9779D /* KSActivityIndicatorBallPulseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B0AE22281BEB38DF00A9779D /* KSActivityIndicatorBallPulseAnimation.m */; };
 		B0AE222F1BEB38DF00A9779D /* KSActivityIndicatorCookieTerminatorAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B0AE222A1BEB38DF00A9779D /* KSActivityIndicatorCookieTerminatorAnimation.m */; };
@@ -81,6 +83,9 @@
 		294B3759199BD9F800718F3F /* SCCircularRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCircularRefreshView.m; sourceTree = "<group>"; };
 		294B375C199BDA7E00718F3F /* DACircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DACircularProgressView.h; sourceTree = "<group>"; };
 		294B375D199BDA7E00718F3F /* DACircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DACircularProgressView.m; sourceTree = "<group>"; };
+		B04EC8BF1C02D1AA007341FA /* SCPullRefresh-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SCPullRefresh-Bridging-Header.h"; sourceTree = "<group>"; };
+		B04EC8C01C02D1AA007341FA /* SCPullRefreshTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SCPullRefreshTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		B04EC8C11C02D1AB007341FA /* SCTestSwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCTestSwiftViewController.swift; sourceTree = "<group>"; };
 		B0AE22271BEB38DF00A9779D /* KSActivityIndicatorBallPulseAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSActivityIndicatorBallPulseAnimation.h; sourceTree = "<group>"; };
 		B0AE22281BEB38DF00A9779D /* KSActivityIndicatorBallPulseAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSActivityIndicatorBallPulseAnimation.m; sourceTree = "<group>"; };
 		B0AE22291BEB38DF00A9779D /* KSActivityIndicatorCookieTerminatorAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSActivityIndicatorCookieTerminatorAnimation.h; sourceTree = "<group>"; };
@@ -152,9 +157,12 @@
 				294B3720199BA44B00718F3F /* SCAppDelegate.m */,
 				294B3753199BD5D800718F3F /* SCRootViewController.h */,
 				294B3754199BD5D800718F3F /* SCRootViewController.m */,
+				B04EC8C11C02D1AB007341FA /* SCTestSwiftViewController.swift */,
 				29399D9B1B23E70500AEA162 /* Launch Screen.xib */,
 				294B3756199BD72A00718F3F /* Images.xcassets */,
 				294B3717199BA44B00718F3F /* Supporting Files */,
+				B04EC8BF1C02D1AA007341FA /* SCPullRefresh-Bridging-Header.h */,
+				B04EC8C01C02D1AA007341FA /* SCPullRefreshTests-Bridging-Header.h */,
 			);
 			path = SCPullRefresh;
 			sourceTree = "<group>";
@@ -300,6 +308,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = SC;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Singro;
 				TargetAttributes = {
@@ -364,6 +373,7 @@
 				294B375A199BD9F800718F3F /* SCCircularRefreshView.m in Sources */,
 				294B3748199BC07D00718F3F /* SCBubbleRefreshView.m in Sources */,
 				294B371D199BA44B00718F3F /* main.m in Sources */,
+				B04EC8C21C02D1AB007341FA /* SCTestSwiftViewController.swift in Sources */,
 				294B3747199BC07D00718F3F /* CAAnimation+Blocks.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B04EC8C31C02D1AB007341FA /* SCTestSwiftViewController.swift in Sources */,
 				B0AE22301BEB38DF00A9779D /* KSActivityIndicatorCookieTerminatorAnimation.m in Sources */,
 				B0AE22321BEB38DF00A9779D /* KSActivityIndicatorTriplePulseAnimation.m in Sources */,
 				B0AE222E1BEB38DF00A9779D /* KSActivityIndicatorBallPulseAnimation.m in Sources */,
@@ -484,11 +495,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SCPullRefresh/SCPullRefresh-Prefix.pch";
 				INFOPLIST_FILE = "SCPullRefresh/SCPullRefresh-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SCPullRefresh/SCPullRefresh-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -498,11 +513,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SCPullRefresh/SCPullRefresh-Prefix.pch";
 				INFOPLIST_FILE = "SCPullRefresh/SCPullRefresh-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SCPullRefresh/SCPullRefresh-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -511,6 +529,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SCPullRefresh.app/SCPullRefresh";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -523,7 +542,10 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "SCPullRefreshTests/SCPullRefreshTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SCPullRefresh/SCPullRefreshTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -533,6 +555,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SCPullRefresh.app/SCPullRefresh";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -541,7 +564,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SCPullRefresh/SCPullRefresh-Prefix.pch";
 				INFOPLIST_FILE = "SCPullRefreshTests/SCPullRefreshTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SCPullRefresh/SCPullRefreshTests-Bridging-Header.h";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
